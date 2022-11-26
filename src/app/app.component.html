@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Game!</h3>
+      <app-game-control (setInterval)="initSetInterval($event)" (clearInterval)="clearInitInterval($event)"></app-game-control>
+      <hr>
+      <div *ngFor="let index of arrayIndex">
+        <app-even [starIndex]="index"></app-even>
+        <app-odd  [starIndex]="index"></app-odd>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
